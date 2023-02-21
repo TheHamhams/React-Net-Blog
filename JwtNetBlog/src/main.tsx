@@ -6,10 +6,6 @@ import { Home, Login, NavBar, Register } from './Components'
 import './index.css'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
-const handleLogin = (username: string, password: string) => {
-
-}
-
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -18,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         {/* Home */}
         <Route path='/' element={[<NavBar key="navbar" />, <Home key="home" />]} />
         {/* Login */}
-        <Route path='/login' element={[<NavBar key="navbar" />, <Login key="login" onLogin={handleLogin} />]} />
+        <Route path='/login' element={[<NavBar key="navbar" />, <Login key="login" />]} />
         {/* Register */}
         <Route path='/register' element={[<NavBar key="navbar" />, <Register key="register" />]} />
       </Routes>
