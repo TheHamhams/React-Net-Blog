@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { register_calls } from '../api'
+import { register_calls } from '../../api'
 import { RegisterForm } from '../Forms'
 
 
