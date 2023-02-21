@@ -10,6 +10,7 @@ export const NavBar = () => {
             <Navbar.Brand>NetBlog</Navbar.Brand>
             <Nav className='ms-auto'>
                 <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href='/dashboard'>Dashboard</Nav.Link>
                 <Nav.Link href='/login'>Login</Nav.Link>
                 <Nav.Link href='/register'>Register</Nav.Link>
             </Nav>

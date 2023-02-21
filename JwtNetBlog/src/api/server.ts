@@ -1,4 +1,4 @@
-import { RegisterProps, LoginProps } from "../Components/Forms"
+import { RegisterProps, LoginProps, PostProps } from "../Components/Forms"
 
 
 const URL = 'https://localhost:7063'
@@ -35,7 +35,25 @@ export const auth_calls = {
             throw new Error('Failed to fetch data from server')
         };
 
-        console.log(response.text)
         return response.text;
     }
 };
+
+export const post_calls = {
+    post: async (data:PostProps) => {
+        const response = await fetch(`${URL}/api/post`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch data from server')
+        };
+
+        return response.json()
+    }
+
+}
